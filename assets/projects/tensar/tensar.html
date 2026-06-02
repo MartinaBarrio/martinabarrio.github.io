@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tensar — Martina Barrio</title>
+    <link rel="icon" type="image/png" href="../../../assets/global/logo-martina.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body style="background-image: none;">
+  <div id="ambient-pixel-container"></div>
+  <div id="cur"></div>
+
+  <!-- NAVEGACIÓN -->
+  <nav id="nav">
+  <div class="nav-logo">
+    <a href="../../../index.html">MB.</a>
+  </div>
+  <div class="nav-links">
+    <a href="../../../index.html#works">← Volver al portfolio</a>
+    <a href="mailto:martinaabarrio@gmail.com" class="nav-contact">Contactame</a>
+  </div>
+</nav>
+<div class="scroll-indicator">
+  <span class="scroll-text">SCROLL</span>
+  <div class="scroll-line"></div>
+</div>
+
+</div>
+
+</div>
+
+  <!-- INTRODUCCIÓN DEL PROYECTO -->
+  <section class="project-intro">
+    <div>
+      <div class="wc-tags" style="margin-bottom: 2rem;">
+        <span class="wc-tag-main">DISEÑO INDUSTRIAL</span>
+        <span class="wc-tag-yr" style="border-color: var(--b); color: var(--b);">2025</span>
+      </div>
+      
+      <!-- Título y Subtítulo -->
+      <h1 class="ab-h" style="font-size: 5rem; margin: 0; line-height: 1;">Tensar.</h1>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; color: var(--blue); margin-top: 1rem; font-weight: 500; letter-spacing: -0.02em;">
+        La forma a partir de la tensión
+      </p>
+    </div>
+
+    <div style="padding-top: calc(var(--px) * 1.5);">
+      <p class="ab-body" style="color: var(--b); font-weight: 500; margin-bottom: 2.5rem;">
+        Este proyecto se fundamenta en el principio de la tensegridad, donde las fuerzas de tensión y compresión operan en sinergia para lograr el equilibrio estructural. A partir de este concepto, se desarrolló un sistema de mobiliario modular, plegable y expansible que se adapta a las dinámicas del espacio. La propuesta se articula en tres módulos funcionales principales: áreas de descanso (con configuraciones para educadores y visitantes), soportes de exhibición y elementos de comunicación.
+      </p>
+
+      <!-- Etiquetas de rol/habilidades (Eliminé el link a Behance temporalmente para mantenerlo limpio, pero puedes agregarlo si lo necesitas) -->
+      <div class="res-desc" style="color: var(--blue);">
+        Diseño Industrial · Sistemas modulares · Tensegridad · Diseño de exposición · Prototipado
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA SECUENCIAL -->
+  <div class="project-gallery">
+    <div class="project-grid">
+
+      <!-- 1. Imagen completa -->
+      <div class="col-4"><img src="tensar-01.jpg" alt="Tensar 01"></div>
+
+      <!-- 2. Imagen completa -->
+      <div class="col-4"><img src="tensar-02.jpg" alt="Tensar 02"></div>
+
+      <!-- 3. Grupo de 4 (Grilla 2x2) -->
+      <div class="col-2"><img src="tensar-03.jpg" alt="Tensar 03"></div>
+      <div class="col-2"><img src="tensar-04.jpg" alt="Tensar 04"></div>
+      <div class="col-2"><img src="tensar-05.jpg" alt="Tensar 05"></div>
+      <div class="col-2"><img src="tensar-06.jpg" alt="Tensar 06"></div>
+
+      <!-- 4. Imagen completa -->
+      <div class="col-4"><img src="tensar-13.jpg" alt="Tensar 13"></div>
+
+      <!-- 5. Grupo de 4 (Grilla 2x2) -->
+      <div class="col-2"><img src="tensar-16.jpg" alt="Tensar 16"></div>
+      <div class="col-2"><img src="tensar-14.jpg" alt="Tensar 14"></div>
+      <div class="col-2"><img src="tensar-15.jpg" alt="Tensar 15"></div>
+      <div class="col-2"><img src="tensar-17.jpg" alt="Tensar 17"></div>
+
+      <!-- 6. Imagen completa -->
+      <div class="col-4"><img src="tensar-07.jpg" alt="Tensar 07"></div>
+
+      <!-- 7. Grupo de 4 (Grilla 2x2) -->
+      <div class="col-2"><img src="tensar-12.jpg" alt="Tensar 12"></div>
+      <div class="col-2"><img src="tensar-08.jpg" alt="Tensar 18"></div>
+      <div class="col-2"><img src="tensar-10.jpg" alt="Tensar 10"></div>
+      <div class="col-2"><img src="tensar-11.jpg" alt="Tensar 11"></div>
+
+    </div>
+  </div>
+
+  <script src="../../../js/main.js"></script>
+
+<script>
+window.addEventListener('load', function() {
+  var si = document.querySelector('.scroll-indicator');
+  if (!si) return;
+  function checkScroll() {
+    var atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 80;
+    si.style.opacity = atBottom ? '0' : '';
+    si.style.pointerEvents = atBottom ? 'none' : '';
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIODATA — Martina Barrio</title>
+    <link rel="icon" type="image/png" href="../../../assets/global/logo-martina.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body style="background-image: none;">
+  <div id="ambient-pixel-container"></div>
+  <div id="cur"></div>
+
+  <nav id="nav">
+  <div class="nav-logo">
+    <a href="../../../index.html">MB.</a>
+  </div>
+  <div class="nav-links">
+    <a href="../../../index.html#works">← Volver al portfolio</a>
+    <a href="mailto:martinaabarrio@gmail.com" class="nav-contact">Contactame</a>
+  </div>
+</nav>
+<div class="scroll-indicator">
+  <span class="scroll-text">SCROLL</span>
+  <div class="scroll-line"></div>
+</div>
+
+</div>
+
+</div>
+
+  <section class="project-intro project-intro--img-title">
+    <div>
+      <div class="wc-tags" style="margin-bottom: 2.5rem;">
+        <span class="wc-tag-main">EXPERIENCIA INMERSIVA</span>
+        <span class="wc-tag-yr" style="border-color: var(--b); color: var(--b);">2025</span>
+      </div>
+      <img src="biodata-titulo.png" alt="Biodata Logo" style="width: 100%; max-width: 500px; height: auto; display: block;">
+    </div>
+
+    <div style="padding-top: calc(var(--px) * 1.5);">
+      <p class="ab-body" style="color: var(--b); font-weight: 500; margin-bottom: 2.5rem;">
+        BIODATA es una experiencia inmersiva e interactiva que vincula los sistemas naturales y principios
+        matemáticos, con énfasis en la espiral logarítmica como patrón geométrico recurrente en la morfogénesis
+        biológica.
+        <br><br>
+        A lo largo de cuatro escenarios temáticos, se exploran fenómenos donde la estructura, el crecimiento y
+        la dinámica de lo vivo responden a leyes matemáticas precisas. Cada espacio propone una interacción
+        sensorial y visual que permite comprender físicamente estas configuraciones autoorganizativas, revelando
+        cómo la matemática no solo describe la naturaleza, sino que la estructura desde sus niveles fundamentales.
+      </p>
+      <div class="res-desc" style="color: var(--blue);">
+        Creative Coding · Arte Generativo · Diseño Interactivo · Análisis Matemático · Diseño Espacial
+      </div>
+    </div>
+  </section>
+
+  <div class="project-gallery">
+    <div class="project-grid">
+
+      <div class="col-4"><img src="biodata-01.jpg" alt="Biodata Vista 01"></div>
+
+      <div class="col-4">
+        <video src="biodata-inicio.mp4" autoplay loop muted playsinline style="background: var(--g1);"></video>
+      </div>
+
+      <div class="col-4"><img src="biodata-02-h.jpg" alt="Biodata Vista 02"></div>
+      <div class="col-4"><img src="biodata-03-h.jpg" alt="Biodata Vista 03"></div>
+      <div class="col-4"><img src="biodata-04-h.jpg" alt="Biodata Vista 04"></div>
+
+      <div class="col-4">
+        <video src="biodata-huracan.mp4" autoplay loop muted playsinline style="background: var(--g1);"></video>
+      </div>
+
+      <div class="col-4"><img src="biodata-05-c.jpg" alt="Biodata Caracol 05"></div>
+      <div class="col-4"><img src="biodata-06-c.jpg" alt="Biodata Caracol 06"></div>
+      <div class="col-4"><img src="biodata-07-c.jpg" alt="Biodata Caracol 07"></div>
+      <div class="col-4"><img src="biodata-08-c.jpg" alt="Biodata Caracol 08"></div>
+
+      <div class="col-4">
+        <video src="biodata-caracol.mp4" autoplay loop muted playsinline style="background: var(--g1);"></video>
+      </div>
+
+      <div class="col-4"><img src="biodata-13-m.jpg" alt="Biodata Mariposas 13"></div>
+      <div class="col-4"><img src="biodata-14-m.jpg" alt="Biodata Mariposas 14"></div>
+      <div class="col-4"><img src="biodata-15-m.jpg" alt="Biodata Mariposas 15"></div>
+      <div class="col-4"><img src="biodata-16-m.jpg" alt="Biodata Mariposas 16"></div>
+
+      <div class="col-4">
+        <video src="biodata-mariposas.mp4" autoplay loop muted playsinline style="background: var(--g1);"></video>
+      </div>
+
+      <!-- CORREGIDO: era <video src="biodata-09-g.jpg"> sin cierre — ahora es <img> -->
+      <div class="col-4"><img src="biodata-09-g.jpg" alt="Biodata Girasol 09"></div>
+      <div class="col-4"><img src="biodata-10-g.jpg" alt="Biodata Girasol 10"></div>
+      <div class="col-4"><img src="biodata-11-g.jpg" alt="Biodata Girasol 11"></div>
+      <div class="col-4"><img src="biodata-12-g.jpg" alt="Biodata Girasol 12"></div>
+
+      
+
+    </div>
+  </div>
+
+  <script src="../../../js/main.js"></script>
+
+<script>
+window.addEventListener('load', function() {
+  var si = document.querySelector('.scroll-indicator');
+  if (!si) return;
+  function checkScroll() {
+    var atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 80;
+    si.style.opacity = atBottom ? '0' : '';
+    si.style.pointerEvents = atBottom ? 'none' : '';
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+});
+</script>
+</body>
+</html>

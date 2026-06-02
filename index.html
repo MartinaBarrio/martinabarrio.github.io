@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martina Barrio — Diseñadora Multidisciplinaria</title>
+  <link rel="icon" type="image/png" href="assets/global/logo-martina.png">
+  <link rel="shortcut icon" href="assets/global/logo-martina.png">
+  <!-- Preconnect para cargar Google Fonts más rápido -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet">
+
+</head>
+
+</head>
+
+<script>
+  function copyToClipboard() {
+    const email = "martinaabarrio@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      const btn = document.getElementById("copy-email-btn");
+      const originalText = "martinaabarrio@gmail.com ↗";
+      
+      // Cambia el texto y el color al hacer clic
+      btn.innerText = "¡Copiado! ✓";
+      btn.style.color = "var(--blue)";
+      
+      // Vuelve a la normalidad después de 2 segundos
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.color = ""; // Restaura el color original
+      }, 2000);
+    });
+  }
+</script>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--w); z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; transition: opacity 0.8s ease, visibility 0.8s ease;">
+    <h2
+      style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2rem; color: var(--b); margin: 0; letter-spacing: -0.02em; text-align: center; width: 100%;">
+      MARTINA BARRIO</h2>
+    <p
+      style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--blue); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.5rem; margin-bottom: 2rem;">
+      Portfolio</p>
+
+    <!-- Barra de progreso geométrica -->
+    <div style="width: 150px; height: 1px; background-color: var(--g5); position: relative; overflow: hidden;">
+      <div id="loader-bar"
+        style="position: absolute; top: 0; left: 0; height: 100%; width: 0%; background-color: var(--b); transition: width 2s cubic-bezier(0.77, 0, 0.175, 1);">
+      </div>
+    </div>
+  </div>
+
+  <div id="ambient-pixel-container"></div>
+
+  <div id="cur"></div>
+
+
+  <nav id="nav">
+
+    <!-- LOGO MB. -->
+    <div class="nav-logo">
+      <a href="index.html">MB.</a>
+    </div>
+
+    <!-- ENLACES DEL ÍNDICE -->
+    <div id="nav-links" class="nav-links">
+      <a href="#about">Sobre mí</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#works">Proyectos</a>
+      <a href="#experience">Experiencia</a>
+      <a href="#contact" class="nav-contact">Contactame</a>
+    </div>
+
+  </nav>
+
+  <!-- ════ HERO MOBILE (visible solo en <=960px) ════ -->
+  <div id="hero-mobile">
+    <span class="hm-hello">Hola, soy</span>
+    <div class="hm-name">MARTINA<br>BARRIO</div>
+
+    <!-- FOTOYO — con pixel overlay, misma lógica que about desktop -->
+    <div class="hm-fotoyo-wrap">
+      <div class="hm-fotoyo-inner">
+        <img src="assets/global/fotoyo.png" alt="Martina Barrio">
+        <div id="hm-pixel-overlay"></div>
+      </div>
+    </div>
+
+    <!-- BLOQUES DE INFO — en flujo normal, debajo de la foto -->
+    <div class="hm-blocks">
+
+      <!-- Bloque 1: DISEÑADORA MULTIDISCIPLINAR -->
+      <div class="tech-box hm-techbox">
+        <div class="tech-box-header">
+          <span class="box-title">DISEÑADORA MULTIDISCIPLINAR</span>
+          <span class="box-number">/03</span>
+        </div>
+        <div class="tech-box-content">
+          <ul class="tech-list">
+            <li><span class="blue-sq"></span>DISEÑO GRÁFICO</li>
+            <li><span class="blue-sq"></span>BRANDING</li>
+            <li><span class="blue-sq"></span>DISEÑO INDUSTRIAL</li>
+            <li><span class="blue-sq"></span>UX / UI DESIGN</li>
+            <li><span class="blue-sq"></span>DISEÑO AUDIOVISUAL</li>
+          </ul>
+          <p class="arrow-text">→ PUENTE ENTRE LO FÍSICO Y LO DIGITAL</p>
+        </div>
+      </div>
+
+      <!-- Bloque 2: datos personales -->
+      <div class="hm-databox">
+        <div class="hm-databox-item">
+          <span class="hm-databox-label">UNIVERSIDAD</span>
+          <span class="hm-databox-value">Torcuato Di Tella</span>
+        </div>
+        <div class="hm-databox-item">
+          <span class="hm-databox-label">CARRERA</span>
+          <span class="hm-databox-value">Lic. en Diseño</span>
+        </div>
+        <div class="hm-databox-item">
+          <span class="hm-databox-label">MINOR</span>
+          <span class="hm-databox-value">Innovación Estratégica</span>
+        </div>
+        <div class="hm-databox-item">
+          <span class="hm-databox-label">IDIOMAS</span>
+          <span class="hm-databox-value">ES · EN</span>
+        </div>
+        <div class="hm-databox-item">
+          <span class="hm-databox-label">UBICACIÓN</span>
+          <span class="hm-databox-value">Buenos Aires, ARG</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <section id="interactive-hero-wrapper">
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <div class="scroll-text">SCROLL</div>
+    </div>
+
+    <div id="pixel-artboard">
+
+      <div class="hero-title-block" id="hero-title-block">
+        <span class="hero-hello">HOLA, SOY</span>
+        <div class="hnm" style="font-size: clamp(1rem, 4vw, 3rem); line-height: 1.1;">
+          <span class="hnm-in" id="hn1">MARTINA</span>
+        </div>
+        <div class="hnm" style="font-size: clamp(1rem, 4vw, 3rem); line-height: 1.1;">
+          <span class="hnm-in" id="hn2" style="transition-delay:.12s">BARRIO</span>
+        </div>
+      </div>
+
+      <div class="hero-info-list" id="hero-info-list">
+        <div class="hero-info-item">
+          <div class="hil-dot"></div>
+          <div class="hil-label">UNIVERSIDAD</div>
+          <div class="hil-value">Torcuato Di Tella</div>
+        </div>
+        <div class="hero-info-item">
+          <div class="hil-label">CARRERA</div>
+          <div class="hil-value">Diseño</div>
+        </div>
+        <div class="hero-info-item">
+          <div class="hil-label">EXPERIENCIA</div>
+          <div class="hil-value blue">UX/UI DESIGNER</div>
+        </div>
+        <div class="hero-info-item">
+          <div class="hil-label">IDIOMAS</div>
+          <div class="hil-value">ES · EN</div>
+        </div>
+        <div class="hero-info-item">
+          <div class="hil-label">DISPONIBLE</div>
+          <div class="hil-value blue">2026 ↗</div>
+        </div>
+        <div class="hero-info-item" style="border-bottom: none;">
+          <div class="hil-label">UBICACIÓN</div>
+          <div class="hil-value">Buenos Aires, Argentina</div>
+        </div>
+      </div>
+
+      <img src="assets/global/foto-violeta.png" id="img-purple" class="hero-layer-img" alt="Foto fondo violeta">
+      <img src="assets/global/foto-trabajando.png" id="img-work" class="hero-layer-img" alt="Foto trabajando 3D">
+      <img src="assets/global/foto-vr-verde.png" id="img-vr-green" class="hero-layer-img" alt="Foto VR verde">
+      <img src="assets/global/foto-vr-blanco.png" id="img-vr-white" class="hero-layer-img" alt="Foto VR blanco">
+
+      <div id="pixel-overlay"></div>
+
+      <svg id="connection-lines" xmlns="http://www.w3.org/2000/svg"></svg>
+
+      <div class="target-point blinking" id="tp1" style="top: calc(var(--px) * 16); left: calc(var(--px) * 46);"></div>
+      <div class="target-point blinking" id="tp2" style="top: calc(var(--px) * 6); left: calc(var(--px) * 55);"></div>
+      <div class="target-point blinking" id="tp3" style="top: calc(var(--px) * 18); left: calc(var(--px) * 58);"></div>
+
+      <div class="tech-box" id="box-role" style="top: calc(var(--px) * 4); left: calc(var(--px) * 61);">
+        <div class="tech-box-header">
+          <span class="box-title">DISEÑADORA MULTIDISCIPLINAR</span>
+          <span class="box-number">/03</span>
+        </div>
+        <div class="tech-box-content">
+          <ul class="tech-list">
+            <li><span class="blue-sq"></span>DISEÑO GRÁFICO</li>
+            <li><span class="blue-sq"></span>BRANDING</li>
+            <li><span class="blue-sq"></span>DISEÑO INDUSTRIAL</li>
+            <li><span class="blue-sq"></span>UX / UI DESIGN</li>
+            <li><span class="blue-sq"></span>DISEÑO AUDIOVISUAL</li>
+          </ul>
+          <p class="arrow-text">→ PUENTE ENTRE LO FÍSICO Y LO DIGITAL</p>
+        </div>
+      </div>
+
+      <div class="tech-box small-box" id="box-awards" style="top: calc(var(--px) * 16); left: calc(var(--px) * 63);">
+        <div class="tech-box-content">
+          <p><strong>[ TRABAJOS PREMIADOS ]</strong><br>Seleccionada para exposiciones de Diseño en la Universidad Torcuato Di Tella</p>
+        </div>
+      </div>
+
+      <div class="tech-box small-box" id="box-innovation"
+        style="top: calc(var(--px) * 18); left: calc(var(--px) * 35);">
+        <div class="tech-box-content">
+          <p>INNOVACIÓN ESTRATÉGICA<br>→ Medios y herramientas contemporáneas.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="ab-left sr">
+      <div class="ab-sl">02 — Sobre mí</div>
+      <h2 class="ab-h">Diseño.<em>PARA COMUNICAR Y CONSTRUIR</em></h2>
+
+      <div class="ab-body sr d2">
+        Mi formación se basa en una visión holística del diseño como práctica proyectual, capaz de abordar problemas
+        en distintas escalas y lenguajes. Concibo el diseño como una herramienta para comunicar valores y generar
+        soluciones claras y significativas desde una perspectiva humana y sensible. Me interesa explorar nuevas formas
+        de pensar y hacer, incorporando herramientas y procesos contemporáneos sin perder profundidad ni criterio en
+        las decisiones de diseño.
+      </div>
+
+      <div class="alinks sr d3">
+        <a class="alink" href="https://www.behance.net/martinabarrio" target="_blank">
+          <span class="alink-t">Behance</span>
+          behance.net/martina ↗
+        </a>
+        <a class="alink" href="https://www.linkedin.com/in/martina-barrio-0a5720215" target="_blank">
+          <span class="alink-t">LinkedIn</span>
+          martina-barrio ↗
+        </a>
+        <div class="alink" style="cursor: pointer;" onclick="copyToClipboard()"
+          onmouseover="this.style.color='var(--blue)'; document.getElementById('cur').classList.add('xl')" onmouseout="this.style.color=''; document.getElementById('cur').classList.remove('xl')">
+          <span class="alink-t">Email</span>
+          <span id="copy-email-btn">martinaabarrio@gmail.com ↗</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-right sr d2">
+      <div class="ab-photo-in">
+        <img src="assets/global/fotoyo.png" alt="Martina Barrio con silla Fracta V1" loading="lazy">
+        <div id="about-pixel-overlay"></div>
+      </div>
+      <div class="ab-cap">
+        <strong>Exposición "De la silla al infinito"</strong>
+        Museo de Arte Moderno, Buenos Aires, Argentina.<br>
+        Silla Fracta V1 (2025)
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="dark-section">
+    <div class="sk-sl sr">03 — Habilidades y Herramientas</div>
+    <h2 class="ab-h sr d1" style="color: var(--w); padding-left: var(--margin); display: block; height: auto;">Habilidades &amp; Herramientas.</h2>
+
+    <div class="skills-strip sr d2">
+
+      <div class="sk-strip-item">
+        <div class="sks-top">
+          <div class="sks-n">01</div>
+          <div class="sks-l">ÁREA</div>
+          <div class="sks-v">Diseño Gráfico<br>& Branding</div>
+        </div>
+        <ul class="sks-list">
+          <li>Composición, tipografía, color</li>
+          <li>Diseño editorial</li>
+          <li>Piezas digitales</li>
+          <li>Desarrollo de identidad</li>
+          <li>Sistemas de marca</li>
+          <li>Adobe Illustrator</li>
+          <li>Photoshop</li>
+          <li>InDesign</li>
+        </ul>
+      </div>
+
+      <div class="sk-strip-item">
+        <div class="sks-top">
+          <div class="sks-n">02</div>
+          <div class="sks-l">ÁREA</div>
+          <div class="sks-v">Diseño Industrial</div>
+        </div>
+        <ul class="sks-list">
+          <li>Desarrollo de producto</li>
+          <li>Design thinking</li>
+          <li>Modelado 3D</li>
+          <li>Prototipado</li>
+          <li>Materiales y procesos</li>
+          <li>Ergonomía</li>
+        </ul>
+      </div>
+
+      <div class="sk-strip-item">
+        <div class="sks-top">
+          <div class="sks-n">03</div>
+          <div class="sks-l">ÁREA</div>
+          <div class="sks-v">Programación</div>
+        </div>
+        <ul class="sks-list">
+          <li>Maquetado web</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS básico</li>
+          <li>Diseño responsive</li>
+          <li>CMS (WordPress)</li>
+          <li>Integración de diseño</li>
+        </ul>
+      </div>
+
+      <div class="sk-strip-item">
+        <div class="sks-top">
+          <div class="sks-n">04</div>
+          <div class="sks-l">ÁREA</div>
+          <div class="sks-v">UX/UI Design</div>
+        </div>
+        <ul class="sks-list">
+          <li>UX Research</li>
+          <li>Flujos de usuario</li>
+          <li>Arquitectura de información</li>
+          <li>Wireframing</li>
+          <li>Prototipado</li>
+          <li>UI design (Figma)</li>
+          <li>Testing</li>
+          <li>Design systems</li>
+        </ul>
+      </div>
+
+      <div class="sk-strip-item">
+        <div class="sks-top">
+          <div class="sks-n">05</div>
+          <div class="sks-l">ÁREA</div>
+          <div class="sks-v">Diseño Audiovisual</div>
+        </div>
+        <ul class="sks-list">
+          <li>Edición de video</li>
+          <li>Motion graphics</li>
+          <li>Premiere</li>
+          <li>After Effects</li>
+          <li>Narrativa visual</li>
+          <li>Storytelling</li>
+          <li>Contenido para redes</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="works">
+    <div class="works-grid">
+
+      <a href="assets/projects/subterra/subterra.html" class="work-card sr">
+        <img src="assets/projects/subterra/subterra-03.jpg" class="wc-img" loading="lazy" alt="Proyecto Subterra">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">TESIS</span>
+            <span class="wc-tag-yr">2025</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Subterra</h3>
+          <div class="wc-sub">Urbanismo · Diseño Gráfico · Diseño Industrial · Diseño de Mobiliario · Visuales · Diseño
+            Editorial · Storytelling · Diseño Web · Branding</div>
+        </div>
+      </a>
+
+      <a href="assets/projects/anti/anti.html" class="work-card sr d1">
+        <img src="assets/projects/anti/anti-04.png" class="wc-img" loading="lazy" alt="Proyecto Anti">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">BRANDING</span>
+            <span class="wc-tag-yr">2025</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Anti</h3>
+          <div class="wc-sub">Branding · Edición de Video · Diseño Editorial · Diseño Web</div>
+        </div>
+      </a>
+
+      <a href="assets/projects/fracta/fracta.html" class="work-card sr d2">
+        <img src="assets/projects/fracta/fracta-01.jpg" class="wc-img" loading="lazy" alt="Proyecto Fracta V1">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">PRODUCTO</span>
+            <span class="wc-tag-yr">2025</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Fracta V1</h3>
+          <div class="wc-sub">Diseño de Mobiliario · Diseño Web</div>
+        </div>
+      </a>
+
+      <a href="assets/projects/tensar/tensar.html" class="work-card sr d3">
+        <img src="assets/projects/tensar/tensar-imagen-portada.png" class="wc-img" loading="lazy" alt="Proyecto Tensar">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">PRODUCTO</span>
+            <span class="wc-tag-yr">2023</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Tensar</h3>
+          <div class="wc-sub">Diseño de Mobiliario · Sistema Modular</div>
+        </div>
+      </a>
+
+      <a href="assets/projects/biodata/biodata.html" class="work-card sr">
+        <img src="assets/projects/biodata/biodata-portada.jpeg" class="wc-img" loading="lazy" alt="Proyecto Biodata">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">DIGITAL</span>
+            <span class="wc-tag-yr">2025</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Biodata</h3>
+          <div class="wc-sub">Diseño de Interfaces · Diseño Audiovisual · Diseño de Interacción</div>
+        </div>
+      </a>
+
+      <a href="assets/projects/helloworld/helloworld.html" class="work-card sr d1">
+        <img src="assets/projects/helloworld/helloworld-portada.jpeg" class="wc-img" loading="lazy" alt="Proyecto Hello World">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">AUDIOVISUAL</span>
+            <span class="wc-tag-yr">2024</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Hello World</h3>
+          <div class="wc-sub">Diseño Audiovisual</div>
+        </div>
+      </a>
+
+      <a href="assets/projects/verdi/verdi.html" class="work-card sr d2">
+        <img src="assets/projects/verdi/verdi-portada.png" class="wc-img" loading="lazy" alt="Proyecto Verdi">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">UX / UI</span>
+            <span class="wc-tag-yr">2024</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Verdi</h3>
+          <div class="wc-sub">UX / UI Design</div>
+        </div>
+      </a>
+
+      <a href="assets/projects/culturama/culturama.html" class="work-card sr d3">
+        <img src="assets/projects/culturama/culturama-portada.png" class="wc-img" loading="lazy" alt="Proyecto Culturama">
+        <div class="wc-header">
+          <div class="wc-tags">
+            <span class="wc-tag-main">UX / UI</span>
+            <span class="wc-tag-yr">2024</span>
+          </div>
+          <span class="wc-link">Ver más ↗</span>
+        </div>
+        <div>
+          <h3 class="wc-title">Culturama</h3>
+          <div class="wc-sub">UX / UI Design</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="t-track">
+      <span class="t-item">Graphic Design</span><span class="t-item">UX / UI</span><span
+        class="t-item">Editorial</span><span class="t-item">Branding</span><span class="t-item">Web Design</span><span
+        class="t-item">Motion</span><span class="t-item">Design Systems</span><span class="t-item">VR /
+        Metaverse</span><span class="t-item">Industrial Design</span><span class="t-item">Sustainable Design</span>
+      <span class="t-item">Graphic Design</span><span class="t-item">UX / UI</span><span
+        class="t-item">Editorial</span><span class="t-item">Branding</span><span class="t-item">Web Design</span><span
+        class="t-item">Motion</span><span class="t-item">Design Systems</span><span class="t-item">VR /
+        Metaverse</span><span class="t-item">Industrial Design</span><span class="t-item">Sustainable Design</span>
+    </div>
+  </div>
+
+  <section id="experience">
+
+    <div class="res-col sr">
+      <h2 class="res-title">Educación</h2>
+
+      <div class="res-item sr d1">
+        <div class="res-meta">
+          <div class="res-role">Lic. en Diseño</div>
+          <div class="res-yr">2022 — 2025</div>
+        </div>
+        <div class="res-inst">Universidad Torcuato Di Tella</div>
+        <div class="res-desc">Formación interdisciplinaria en diseño gráfico, industrial, digital y audiovisual.</div>
+      </div>
+
+      <div class="res-item sr d2">
+        <div class="res-meta">
+          <div class="res-role">Diplomatura en UX/UI Design</div>
+          <div class="res-yr">2026</div>
+        </div>
+        <div class="res-inst">Universidad Tecnológica Nacional Buenos Aires</div>
+      </div>
+
+      <div class="res-item sr d3">
+        <div class="res-meta">
+          <div class="res-role">Crafting in Metaverse</div>
+          <div class="res-yr">2025</div>
+        </div>
+        <div class="res-inst">Workshop UTDT × Toronto Metropolitan</div>
+        <div class="res-desc">Proyecto colaborativo de VR con Gravity Sketch.</div>
+      </div>
+
+      <div class="res-item sr d4">
+        <div class="res-meta">
+          <div class="res-role">Creación de Producto con IA</div>
+          <div class="res-yr">2026</div>
+        </div>
+        <div class="res-inst">Coderhouse</div>
+      </div>
+
+    </div>
+
+    <div class="res-col sr d1">
+      <h2 class="res-title">Experiencia</h2>
+
+      <div class="res-item sr d2">
+        <div class="res-meta">
+          <div class="res-role">Diseñadora Independiente</div>
+          <div class="res-yr">2026 — Presente</div>
+        </div>
+        <div class="res-inst">Freelance</div>
+      </div>
+
+      <div class="res-item sr d3">
+        <div class="res-meta">
+          <div class="res-role">Diseñadora UX/UI</div>
+          <div class="res-yr">2025 — 2026</div>
+        </div>
+        <div class="res-inst">Universidad Torcuato Di Tella</div>
+        <div class="res-desc">Diseño de interfaces y mejoras de UX para la Universidad. Organización de contenidos y flujos de usuario. Prototipado en Figma. Desarrollo de proyectos desde el boceto hasta el lanzamiento.</div>
+      </div>
+
+      <div class="res-item sr d4">
+        <div class="res-meta">
+          <div class="res-role">Expositora y Educadora</div>
+          <div class="res-yr">2025</div>
+        </div>
+        <div class="res-inst">Museo de Arte Moderno de Buenos Aires</div>
+        <div class="res-desc">Exposición "De la silla al infinito" con la Silla Fracta V1.</div>
+      </div>
+
+      <div class="res-item sr d5">
+        <div class="res-meta">
+          <div class="res-role">Secretaria</div>
+          <div class="res-yr">2021</div>
+        </div>
+        <div class="res-inst">Rotary Interact</div>
+      </div>
+
+    </div>
+
+    <div id="awards" class="awards-wrapper sr d2">
+      <h2 class="res-title awards-title">Reconocimientos</h2>
+      <div class="awards-grid">
+
+        <div class="aw-item">
+          <div class="aw-role">★ Trabajo Destacado — Diseño Sustentable</div>
+          <div class="aw-yr">2025</div>
+          <div class="aw-desc">Sistema de ducha móvil para escuelas en barrios vulnerables.</div>
+        </div>
+
+        <div class="aw-item">
+          <div class="aw-role">★ Referente de Carrera — UTDT</div>
+          <div class="aw-yr">2023</div>
+          <div class="aw-desc">Seleccionada entre los mejores promedios para guiar y mentorear a estudiantes de primer año.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ════ CONTACT ════ -->
+  <section id="contact" class="ct-section">
+    <div class="ct-top sr">
+      <div class="sk-sl">05 — Contacto</div>
+      <h2 class="ab-h ct-title">Hablemos.</h2>
+    </div>
+
+    <div class="ct-links">
+      <div class="ct-row sr d1" onclick="copyContactEmail()" style="cursor: pointer;" onmouseenter="document.getElementById('cur').classList.add('xl')" onmouseleave="document.getElementById('cur').classList.remove('xl')">
+        <span class="ct-label">Email</span>
+        <span class="ct-value" id="ct-email-btn">martinaabarrio@gmail.com</span>
+        <span class="ct-arrow">↗</span>
+      </div>
+      <a class="ct-row sr d2" href="https://www.behance.net/martinabarrio" target="_blank" rel="noopener noreferrer">
+        <span class="ct-label">Behance</span>
+        <span class="ct-value">behance.net/martina</span>
+        <span class="ct-arrow">↗</span>
+      </a>
+      <a class="ct-row sr d3" href="https://www.linkedin.com/in/martina-barrio-0a5720215" target="_blank" rel="noopener noreferrer">
+        <span class="ct-label">LinkedIn</span>
+        <span class="ct-value">martina-barrio</span>
+        <span class="ct-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="ct-availability sr d4">
+      <div class="ct-avail-dot"></div>
+      <span>Disponible para proyectos freelance &amp; posiciones permanentes — 2026</span>
+    </div>
+  </section>
+
+  <script>
+  function copyContactEmail() {
+    navigator.clipboard.writeText("martinaabarrio@gmail.com").then(() => {
+      const btn = document.getElementById("ct-email-btn");
+      btn.textContent = "¡Copiado! ✓";
+      setTimeout(() => { btn.textContent = "martinaabarrio@gmail.com"; }, 2000);
+    });
+  }
+  </script>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="dark-section">
+    <div class="fn">MARTINA<br>BARRIO</div>
+    <div>
+      <div class="fc-t">Contacto</div>
+      <ul class="fl">
+        <li><a href="mailto:martinaabarrio@gmail.com">martinaabarrio@gmail.com</a></li>
+        <li><a>Buenos Aires, Argentina</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fc-t">Links</div>
+      <ul class="fl">
+        <li><a href="https://www.behance.net/gallery/244979499/Portfolio-2025" target="_blank">Behance ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/martina-barrio-0a5720215" target="_blank">LinkedIn ↗</a></li>
+      </ul>
+    </div>
+    <div class="f-copy"><span>© 2026 Martina Barrio — Diseñadora Integral</span><span>Construido sobre la grilla.</span></div>
+  </footer>
+  <script src="js/main.js"></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      // 1. GESTIÓN DE LA PANTALLA DE CARGA
+      const preloader = document.getElementById('preloader');
+      const loaderBar = document.getElementById('loader-bar');
+
+      // Inicia la barra de progreso
+      setTimeout(() => {
+        if (loaderBar) loaderBar.style.width = '100%';
+      }, 100);
+
+      // Tras 2.5 segundos, oculta el preloader y dispara el título
+      setTimeout(() => {
+        if (preloader) {
+          preloader.style.opacity = '0';
+          setTimeout(() => preloader.style.visibility = 'hidden', 800);
+        }
+
+        // Esta clase dispara la animación de escritura en CSS
+        document.body.classList.add('site-loaded');
+      }, 2500);
+
+      // 2. OBSERVADOR PARA ANIMAR IMÁGENES
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // Deja de observar la imagen para que la animación ocurra solo 1 vez
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 }); // Se dispara cuando el 15% de la imagen asoma en pantalla
+
+      // Busca todas las imágenes del sitio y las prepara para ser animadas
+      document.querySelectorAll('img, video').forEach(el => {
+        el.classList.add('reveal-item');
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

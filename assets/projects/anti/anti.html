@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti — Martina Barrio</title>
+  <link rel="icon" type="image/png" href="../../../assets/global/logo-martina.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body style="background-image: none;">
+<div id="ambient-pixel-container"></div>
+<div id="cur"></div>
+
+<nav id="nav">
+  <div class="nav-logo">
+    <a href="../../../index.html">MB.</a>
+  </div>
+  <div class="nav-links">
+    <a href="../../../index.html#works">← Volver al portfolio</a>
+    <a href="mailto:martinaabarrio@gmail.com" class="nav-contact">Contactame</a>
+  </div>
+</nav>
+
+<div class="scroll-indicator">
+  <span class="scroll-text">SCROLL</span>
+  <div class="scroll-line"></div>
+</div>
+
+<section class="project-intro">
+  <div>
+    <img src="anti-01.png" alt="Anti Logo" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 3rem;">
+    <div style="max-width: 500px;">
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; line-height: 1.6; color: var(--b);">
+        <strong style="color: var(--blue); font-size: 1.1rem;">anti-</strong><br>
+        prefijo. Significa 'opuesto' o 'con propiedades contrarias'.<br>
+        <span style="color: var(--g3);">Ejm: Anticategoria, antirepresentativo.</span>
+      </p>
+    </div>
+  </div>
+
+  <div style="padding-top: 1rem; border-left: 1px solid var(--blue); padding-left: calc(var(--px) * 2);">
+    <div class="wc-tags" style="margin-bottom: 2rem;">
+      <span class="wc-tag-main">BRANDING & CONCEPT</span>
+      <span class="wc-tag-yr" style="border-color: var(--b); color: var(--b);">2025</span>
+    </div>
+    <p style="font-family: 'Syne', sans-serif; font-weight: 600; font-size: 1.1rem; line-height: 1.5; color: var(--b); margin-bottom: 1.5rem;">
+      Brief: Donde lo anómalo se superpone a lo funcional [casi como un antidiseño].
+    </p>
+    <p class="res-desc" style="font-size: 0.95rem; line-height: 1.8;">
+      Objetos que casi no se reconocen. Tensionan el eje de la función que deberían cumplir, se caen de su categoría.
+      <br><br>
+      <span style="font-style: italic; color: var(--blue);">[quizás forman parte de su propio anticatálogo]</span>
+    </p>
+  </div>
+</section>
+
+<div class="project-gallery">
+  <div class="project-grid">
+
+    <div class="col-4">
+      <video src="TEASER ANTI.mp4" autoplay playsinline controls style="width: 100%; height: auto; display: block;"></video>
+    </div>
+
+    <div class="col-4">
+      <img src="anti-02.png" alt="Anti View 02">
+    </div>
+
+    <div class="col-4">
+      <img src="anti-trama-03.jpg" alt="Anti Trama 03">
+    </div>
+
+    <div class="col-2">
+      <img src="anti-04.png" alt="Anti 04" style="height: calc(var(--px) * 13); object-fit: cover;">
+    </div>
+    <div class="col-2">
+      <img src="anti-05.jpg" alt="Anti 05" style="height: calc(var(--px) * 13); object-fit: cover;">
+    </div>
+
+    <div class="col-4">
+      <img src="anti-03.jpg" alt="Anti View 03">
+    </div>
+
+    <div class="col-2">
+      <img src="anti-06.gif" alt="Anti 06" style="height: calc(var(--px) * 13); object-fit: cover;">
+    </div>
+    <div class="col-2">
+      <img src="anti-catalogo.gif" alt="Anti Catálogo Animación" style="height: calc(var(--px) * 13); object-fit: cover;">
+    </div>
+
+    <div class="col-4">
+      <img src="anti-07.png" alt="Vista panorámica completa">
+    </div>
+
+    
+    <div class="col-4">
+      <video src="anti-grilla.mp4" autoplay loop muted playsinline style="width: 100%; height: auto; display: block;"></video>
+    </div>
+
+    <div class="col-4">
+      <img src="anti-trama-02.gif" alt="Anti Trama Animada 02">
+    </div>
+
+    <div class="col-4">
+      <img src="anti-trama-01.gif" alt="Anti Trama Animada 01">
+    </div>
+
+  </div>
+</div>
+
+<script src="../../../js/main.js"></script>
+
+<script>
+window.addEventListener('load', function() {
+  var si = document.querySelector('.scroll-indicator');
+  if (!si) return;
+  function checkScroll() {
+    var atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 80;
+    si.style.opacity = atBottom ? '0' : '';
+    si.style.pointerEvents = atBottom ? 'none' : '';
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+});
+</script>
+</body>
+</html>
